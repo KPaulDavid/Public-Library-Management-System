@@ -1,0 +1,148 @@
+
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fine</title>
+    <style>
+        *{
+            margin:0px;
+            border:0px;
+        }
+        body{
+            background-color: rgb(27, 45, 45);
+            
+        }
+        div{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            
+            width: 499px;
+            margin:0%;
+        }
+        #user{
+            display:flex;
+            justify-content: center;
+            align-items: center;  
+            margin:20px 30px 40px;
+            height: 100px;
+            width:300px;
+            align-content: flex-start;
+        }
+        #userid{
+            background-color: lightcyan;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            height:50px;
+            width:300px;
+        }
+        #number{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            height: 50px;
+            width: 200px;
+            text-align: center;
+           text-decoration: cadetblue; 
+        }
+
+        .fine{
+            background-color: aliceblue;
+            height:50px;
+            width:100px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            font-style: normal;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        select{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height:50px;
+            width:150px;
+            background-color: white;
+        }
+        #latefee{
+            display:box;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            background-color: blanchedalmond;
+        }
+        #booklost{
+            display:block;
+            background-color: rgb(194, 184, 44);
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+
+
+        } #bookdamage{
+            display:block;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+        }
+        #submit{
+            display: flex;
+            text-transform: uppercase;
+            justify-content: center;
+            align-items: center;
+            background-color:lightblue;
+            color:white;  
+            height:50px;
+            width: 100px;
+           margin:12px ,12px;
+             
+        }
+        #reset{
+            background-color:blanchedalmond;
+            color:black;
+            height:50px;
+            width:100px;
+            margin: 12px ,12px;
+        }
+  
+        
+    </style>
+    <link rel="stylesheet" href="css/all.css">
+    </head>
+    <?php require_once 'main.php'; 
+require_once 'db_connect.php';?>
+
+    <body>
+        <form method="post">
+        <center>
+	<font color="white" size="12">CHARGES DETAILS</font>
+        <div id="user">
+            <lable for="userid"id="userid">USER ID :</lable>
+            <input type="number"id="number"placeholder="ENTER USER ID" name="userid"  required autofocus/>
+        </div>
+        <div>
+        <label for="fine"class="fine">Fine </label>
+            <select>
+            <option value="fine">- - SELECT REASON - -</option>
+            <option value="late fee"id="latefee" name="fine">Late Return</option>
+            <option value="Book lost"id="booklost" name="fine">Book Lost</option>
+            <option value="Damage book"id="bookdamage" name="fine">Book Damage</option>
+        </select></div>
+        <br/> <br/><br/><br/>
+        <br/>
+        <br/>
+        <table border="1">
+        <center>
+        <tr> <td> <button value="submit"id="submit">submit</button><td>  <td><td> <td>  <td>  <td> <td> <td> <td><td> <td> <td><button value="Reset" id="reset">RESET</button></td></tr> 
+    
+    </center>
+    </table>
+</form>
+</body>
+</html>
